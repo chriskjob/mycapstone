@@ -237,7 +237,7 @@ workflows:
     jobs:
       #- eksctl-install
       - check-cluster:
-      #    cluster-name: mycapstone
+          cluster-name: mycapstone
           #requires:
           #  - eksctl-install
       #- docker_check
