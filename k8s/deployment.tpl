@@ -24,5 +24,5 @@ spec:
         env:
         - name: VERSION_INFO
           value: "VERSION_INFO_VALUE"
-        - name: BUILD_DATE
-          value: "BUILD_DATE_VALUE"
+        #- name: BUILD_DATE
+        #  value: "BUILD_DATE_VALUE"
