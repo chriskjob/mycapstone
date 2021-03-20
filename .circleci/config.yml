@@ -122,11 +122,9 @@ jobs:
       - run:
           name: Kluster info
           command: |
-            echo "URL: " ${AWS_ECR_ACCOUNT_URL}
             kubectl get services
             #aws eks update-kubeconfig --name mycapstone --region us-east-1
             kubectl get nodes
-
 
 #--------------------- Job 4 --------------------------
 # build and upload image (see under workflow)
@@ -169,9 +167,8 @@ jobs:
             ls -l
             BUILD_DATE=$(date '+%Y%m%d%H%M%S')
             cat k8s/deployment.tpl |\
-
-            sed "s|DOCKER_REPO_NAME|<< parameters.account-url >>|" |\
-            sed "s|DOCKER_IMAGE_TAG|<< parameters.tag >>|" > k8s/deployment.yml
+            sed "s|DOCKER_IMAGE_NAME|<< parameters.docker-image-name >>|" |\
+            sed "s|DOCKER_REPO_NAME|<< parameters.account-url >>|" |\ > k8s/deployment.yml
             cat k8s/deployment.yml
 
       - aws-eks/update-kubeconfig-with-authenticator:
