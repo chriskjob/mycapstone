@@ -260,7 +260,7 @@ workflows:
           account-url: ${AWS_ECR_ACCOUNT_URL}
           docker-image-name: "${AWS_ECR_URL}/capstone:${CIRCLE_SHA1}"
           version-info: "${CIRCLE_SHA1}"
-          #tag: ${CIRCLE_SHA1}
+          tag: ${CIRCLE_SHA1}
           requires:
             - aws-ecr/create-cluster
       #- test-application:
