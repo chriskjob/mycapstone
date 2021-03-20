@@ -135,7 +135,7 @@ jobs:
           docker push joepub/capstone:latest
           #docker rm $(docker ps -aq)
           #docker image rm capstone
-          #docker image rm 067015178777.dkr.ecr.us-east-1.amazonaws.com/capst
+          #docker image rm 067015178777.dkr.ecr.us-east-1.amazonaws.com/capstone
 
 #--------------------- Job 5 --------------------------
 # build and upload image (see under workflow)
@@ -251,21 +251,21 @@ workflows:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           create-repo: true
-          tag: ${CIRCLE_SHA1}
+          tag: ${CIRCLE_SHA1.7}
           requires:
              - check-cluster
       - deploy-application:
           cluster-name: mycapstone
           aws-region: $AWS_DEFAULT_REGION
           account-url: ${AWS_ECR_ACCOUNT_URL}
-          docker-image-name: "${AWS_ECR_URL}/capstone:${CIRCLE_SHA1}"
-          tag: ${CIRCLE_SHA1}
+          docker-image-name: "${AWS_ECR_URL}/capstone:${CIRCLE_SHA1.7}"
+          tag: ${CIRCLE_SHA1.7}
           requires:
             - aws-ecr/build-and-push-image
       #- test-application:
       #    name: test-application
       #    cluster-name: mycapstone
       #    aws-region: $AWS_DEFAULT_REGION
-      #    expected-version-info: "${CIRCLE_SHA1}"
+      #    expected-version-info: "${CIRCLE_SHA1.7}"
       #    requires:
       #     - deploy-application
