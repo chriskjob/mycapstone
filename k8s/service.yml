@@ -2,11 +2,13 @@ apiVersion: v1
 kind: Service
 metadata:
   name: capstone
-#  namespace: capstone
+  labels:
+    app: demo
 spec:
   selector:
     app: capstone
+    type: LoadBalancer
   ports:
-  - protocol: TCP
-    port: 8000
+  - port: 8000
     targetPort: 8000
+    protocol: TCP
