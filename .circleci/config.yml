@@ -119,10 +119,6 @@ jobs:
       - kubernetes/install
       - aws-eks/update-kubeconfig-with-authenticator:
           cluster-name: << parameters.cluster-name >>
-      account-url:
-        description: |
-          Docker AWS ECR repository url
-        type: string
       - run:
           name: Kluster info
           command: |
