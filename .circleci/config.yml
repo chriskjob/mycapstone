@@ -249,11 +249,11 @@ workflows:
           tag: ${CIRCLE_SHA1}
           requires:
              - check-cluster
-      - aws-eks/create-cluster:
-          cluster-name: mycapstone
-          aws-region: $AWS_DEFAULT_REGION
-          requires:
-            - aws-ecr/build-and-push-image
+#      - aws-eks/create-cluster:
+#          cluster-name: mycapstone
+#          aws-region: $AWS_DEFAULT_REGION
+#          requires:
+#            - aws-ecr/build-and-push-image
       - deploy-application:
           cluster-name: mycapstone
           aws-region: $AWS_DEFAULT_REGION
