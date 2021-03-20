@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
       - name: capstone
-        image: joepub/capstone:latest
+        image: DOCKER_IMAGE_NAME #joepub/capstone:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8000

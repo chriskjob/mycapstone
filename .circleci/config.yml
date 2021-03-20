@@ -251,15 +251,15 @@ workflows:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           create-repo: true
-          tag: latest #${CIRCLE_SHA1}
+          tag: ${CIRCLE_SHA1}
           requires:
              - check-cluster
       - deploy-application:
           cluster-name: mycapstone
           aws-region: $AWS_DEFAULT_REGION
           account-url: ${AWS_ECR_ACCOUNT_URL}
-          docker-image-name: "${AWS_ECR_URL}/capstone:latest"
-          tag: latest #${CIRCLE_SHA1}
+          docker-image-name: "${AWS_ECR_URL}/capstone:${CIRCLE_SHA1}"
+          tag: ${CIRCLE_SHA1}
           requires:
             - aws-ecr/build-and-push-image
       #- test-application:
