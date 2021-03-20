@@ -168,8 +168,8 @@ jobs:
             cat k8s/deployment.tpl |\
             sed "s|DOCKER_IMAGE_NAME|<< parameters.docker-image-name >>|" |\
             sed "s|DOCKER_REPO_NAME|<< parameters.account-url >>|" |\
-            #"s|BUILD_DATE_VALUE|$BUILD_DATE|>>|" |\
-            “s|VERSION_INFO_VALUE|<< parameters.version-info >>|\"
+            sed "s|BUILD_DATE_VALUE|$BUILD_DATE|>>|" |\
+            sed “s|VERSION_INFO_VALUE|<< parameters.version-info >>|\"
             sed "s|DOCKER_IMAGE_TAG|<< parameters.tag >>|" > k8s/deployment.yml
 
       - aws-eks/update-kubeconfig-with-authenticator:
