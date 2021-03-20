@@ -251,7 +251,7 @@ workflows:
           aws-access-key-id: AWS_ACCESS_KEY_ID
           aws-secret-access-key: AWS_SECRET_ACCESS_KEY
           create-repo: true
-          tag: ${CIRCLE_SHA1}
+          tag: latest #${CIRCLE_SHA1}
           requires:
              - check-cluster
       - deploy-application:
