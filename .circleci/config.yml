@@ -258,7 +258,7 @@ workflows:
           cluster-name: mycapstone
           aws-region: $AWS_DEFAULT_REGION
           account-url: ${AWS_ECR_URL}
-          docker-image-name: "${AWS_ECR_URL}/capstone:${CIRCLE_SHA1}"
+          docker-image-name: "${AWS_ECR_URL}:${CIRCLE_SHA1}"
           version-info: "${CIRCLE_SHA1}"
           tag: ${CIRCLE_SHA1}
           requires:
