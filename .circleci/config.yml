@@ -218,8 +218,9 @@ jobs:
           command: |
             kubectl get pods
             kubectl get services
-            sleep 30
+            sleep 60s
             EXTERNAL_IP=$(kubectl get service demoapp | awk '{print $4}' | tail -n1)
+            echo $EXTERNAL_IP
             #EXTERNAL_PORT=$(kubectl get services --namespace=capstone | tail -n1 | awk '{ print $5 }' | cut -d : -f1)
             #sleep 180
             #curl -s "http://$EXTERNAL_IP:$EXTERNAL_PORT" | grep "hello"
