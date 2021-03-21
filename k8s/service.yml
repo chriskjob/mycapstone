@@ -3,12 +3,12 @@ kind: Service
 metadata:
   name: capstone
   labels:
-    app: demo
+    app: capstone
 spec:
   selector:
     app: capstone
-    type: LoadBalancer
   ports:
-  - port: 8000
+  - protocol: TCP
+    port: 8000
     targetPort: 8000
-    protocol: TCP
+  type: LoadBalancer

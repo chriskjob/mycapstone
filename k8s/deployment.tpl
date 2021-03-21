@@ -4,7 +4,6 @@ metadata:
   name: capstone
   labels:
     app: capstone
-#  namespace: capstone
 spec:
   replicas: 1
   selector:
@@ -21,8 +20,3 @@ spec:
         imagePullPolicy: Always
         ports:
         - containerPort: 8000
-        #env:
-        #- name: VERSION_INFO
-        #  value: "VERSION_INFO_VALUE"
-        #- name: BUILD_DATE
-        #  value: "BUILD_DATE_VALUE"
