@@ -14,5 +14,9 @@ The process is:
 3. If the integration is successful then the Web App is deployed either in a development or production environment.
 
 
+<img src="/images/CCI_pipes_1.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+<img src="/images/CCI_pipes_2.png" alt="MarineGEO circle logo" style="height: 100px; width:100px;"/>
+
+
 ![Circleci Pipeline](/images/CCI_pipes_1.png)
 ![Circleci Pipeline](/images/CCI_pipes_2.png)
