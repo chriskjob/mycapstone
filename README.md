@@ -13,9 +13,9 @@ The process is:
 2. If successful, it triggers the Circleci's to integrate the new code based on the pipeline created
 3. If the integration is successful then the Web App is deployed either in a development or production environment.
 
-
-<img src="/images/CCI_pipes_1.png" alt="MarineGEO circle logo" style="height: 50px; width:50px;"/>
-<img src="/images/CCI_pipes_2.png" alt="MarineGEO circle logo" style="height: 50px; width:50px;"/>
+links:
+<a href="http://tobagoborn.com/images/CCI_pipes_1.png" alt="MarineGEO circle logo" style="height: 50px; width:50px;"/>
+a href="http://tobagoborn.com/images/CCI_pipes_1.png" alt="MarineGEO circle logo" style="height: 50px; width:50px;"/>
 
 
 ![Circleci Pipeline](/images/CCI_pipes_1.png)
