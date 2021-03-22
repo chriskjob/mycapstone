@@ -11,6 +11,8 @@ It uses the following to automate the :
 The process is:
 1. Code changes are push to the Github repository.
 2. If successful, it triggers the Circleci's to integrate the new code based on the pipeline created
-3.  
-Web Application consists of:
-1. A simple HTML page
+3. If the integration is successful then the Web App is deployed either in a development or production environment.
+
+
+![Circleci Pipeline](/images/CCI_pipes_1.png)
+![Circleci Pipeline](/images/CCI_pipes_2.png)
