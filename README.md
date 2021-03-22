@@ -14,8 +14,8 @@ The process is:
 3. If the integration is successful then the Web App is deployed either in a development or production environment.
 
 links:
-[link 1]()<a href="http://tobagoborn.com/images/CCI_pipes_1.png" alt="MarineGEO circle logo" style="height: 50px; width:50px;"/a>)
-[link 2](<a href="http://tobagoborn.com/images/CCI_pipes_1.png" alt="MarineGEO circle logo" style="height: 50px; width:50px;"/a>)
+[link 1](http://tobagoborn.com/images/CCI_pipes_1.png)
+[link 2](http://tobagoborn.com/images/CCI_pipes_1.png)
 
 
 ![Circleci Pipeline](/images/CCI_pipes_1.png)
