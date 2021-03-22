@@ -233,11 +233,14 @@ jobs:
 workflows:
   main:
     jobs:
-      #- eksctl-install
+      - linting
+      - eksctl-install:
+          requires:
+            - linting
       - check-cluster:
           cluster-name: mycapstone
-          #requires:
-          #  - eksctl-install
+          requires:
+            - eksctl-install
       - aws-ecr/build-and-push-image:
           account-url: AWS_ECR_URL
           region: AWS_DEFAULT_REGION
