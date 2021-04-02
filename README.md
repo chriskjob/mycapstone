@@ -27,6 +27,6 @@ The pipelines include
 6. Deploy image to AWS cluster
 7. Test whether a valid IP address is assigned
 
-Note: Alerts are sent to slack if any pipe fails [link 4](http://tobagoborn.com/images/slack_fail_note.png)
+Note: Alerts are sent to slack if any pipe fails [link 4](http://cloudtobago.com/udacity/capstone/images/slack_fail_note.png)
 
-Finally, once the a valid IP has been assigned, the Web App is available [link 5](http://tobagoborn.com/images/Web_App2.png)
+Finally, once the a valid IP has been assigned, the Web App is available [link 5](http://cloudtobago.com/udacity/capstone/images/Web_App2.png)
