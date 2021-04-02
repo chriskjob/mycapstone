@@ -9,14 +9,14 @@ It uses the following to automate the process:
 3. Rolling deploying
 
 
-The process is (Click to see a diagram outlining the project steps [link 1](http://tobagoborn.com/images/CICD_diagram.png)):
+The process is (Click to see a diagram outlining the project steps [link 1](http://cloudtobago.com/udacity/capstone/images/CICD_diagram.png)):
 1. Code changes are push to the Github repository.
 2. If successful, it triggers the Circleci to integrate the new code using the pipeline created
 3. If the integration is successful then the Web App is deployed either in a development or production environment.
 
 Click on the links to see an outline of what the pipelines look like:    
-[link 2](http://tobagoborn.com/images/CCI_pipes_1.png)    
-[link 3](http://tobagoborn.com/images/CCI_pipes_1.png)
+[link 2](http://cloudtobago.com/udacity/capstone/images/CCI_pipes_1.png)    
+[link 3](http://cloudtobago.com/udacity/capstone/images/CCI_pipes_1.png)
 
 The pipelines include
 1. Lint the python code used for the Web app and the Dockerfile
